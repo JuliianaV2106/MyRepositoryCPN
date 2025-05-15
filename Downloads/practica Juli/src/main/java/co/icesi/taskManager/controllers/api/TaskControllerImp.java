@@ -47,8 +47,8 @@ public class TaskControllerImp {
     @PutMapping
     public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto dto) {
         Task task = taskMapper.taskDtoToTask(dto);
-        Task updat = taskService.updateTask(task);
-        return ResponseEntity.ok(taskMapper.taskToTaskDto(updat));
+        Task update = taskService.updateTask(task);
+        return ResponseEntity.ok(taskMapper.taskToTaskDto(update));
     }
 
 
